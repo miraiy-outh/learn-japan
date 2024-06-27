@@ -1,0 +1,19 @@
+@import "../../../index.scss";
+
+.button__menu {
+  height: 64px;
+  width: 200px;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  border: 1px solid black;
+  border-radius: 32px;
+  &__container {
+    @include flex-column;
+    gap: 16px;
+  }
+}
+
+.button__menu:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}

@@ -1,0 +1,25 @@
+:root {
+  --primary-pink: #f8b8ff;
+  --primary-green: #97bb75;
+  --primary-yellow: #f9ff8c;
+  --bg-color: #ffffde;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}

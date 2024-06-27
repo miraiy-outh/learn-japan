@@ -1,0 +1,7 @@
+@import "../../index.scss";
+
+.main-menu {
+  @include flex-row;
+  margin: 24px 0 64px 24px;
+  gap: 40px;
+}
