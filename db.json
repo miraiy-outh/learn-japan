@@ -1,0 +1,41 @@
+{
+  "alphabet": [
+    {
+      "id": "1",
+      "name": "katakana",
+      "letters": [
+        { "id": "1", "symbol": "", "transcription": "" },
+        { "id": "2", "symbol": "", "transcription": "" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "hiragana",
+      "letters": [
+        { "id": "1", "symbol": "", "transcription": "" },
+        { "id": "2", "symbol": "", "transcription": "" }
+      ]
+    }
+  ],
+  "folders": [
+    {
+      "id": "1",
+      "name": "food",
+      "words": [
+        { "id": "1", "word": "", "transcription": "", "translation": "" },
+        { "id": "2", "word": "", "transcription": "", "translation": "" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "family",
+      "words": [
+        { "id": "1", "word": "", "transcription": "", "translation": "" },
+        { "id": "2", "word": "", "transcription": "", "translation": "" }
+      ]
+    }
+  ],
+  "grammar": {
+    "name": "typicode"
+  }
+}
