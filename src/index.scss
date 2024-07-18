@@ -3,15 +3,19 @@
   --primary-green: #97bb75;
   --primary-yellow: #f9ff8c;
   --bg-color: #ffffde;
+  --subtext-color: rgb(121, 118, 118);
 }
 
 * {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
   font-weight: 400;
+}
+
+body {
+  background-color: var(--bg-color);
 }
 
 @mixin flex-column {
