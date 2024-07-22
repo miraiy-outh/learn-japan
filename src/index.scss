@@ -1,21 +1,38 @@
+@font-face {
+  font-family: "Omnes";
+  src: url("public/fonts/omnes/Omnes Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: normal;
+}
+
+@font-face {
+  font-family: "Omnes";
+  src: url("public/fonts/omnes/Omnes Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: normal;
+}
+
 :root {
   --primary-pink: #f8b8ff;
   --primary-green: #97bb75;
   --primary-yellow: #f9ff8c;
   --bg-color: #ffffde;
-  --subtext-color: rgb(121, 118, 118);
+  --subtext-color: rgb(141, 139, 139);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica, sans-serif;
+  font-family: "Omnes", Helvetica, sans-serif;
   font-weight: 400;
 }
 
 body {
   background-color: var(--bg-color);
+  margin: 24px 64px;
 }
 
 @mixin flex-column {

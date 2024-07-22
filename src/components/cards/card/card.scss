@@ -4,19 +4,19 @@
   @include flex-column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   background: white;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 10%;
   &__word {
-    font-size: 54px;
+    font-size: 64px;
     font-weight: 500;
     line-height: 1;
   }
 
   &__translate {
-    font-size: 24px;
+    font-size: 36px;
     font-style: italic;
     color: var(--subtext-color);
   }

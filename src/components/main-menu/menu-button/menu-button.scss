@@ -1,11 +1,15 @@
 @import "../../../index.scss";
 
 .button__menu {
+  position: relative;
   height: 64px;
-  width: 200px;
-  font-size: 24px;
-  letter-spacing: 1.5px;
-  border: 1px solid black;
+  width: 240px;
+  font-size: 28px;
+  letter-spacing: 3px;
+  line-height: 1;
+  font-weight: 600;
+  padding: 0 0 4px 4px;
+  border: 2px solid black;
   border-radius: 32px;
   &__container {
     @include flex-column;
