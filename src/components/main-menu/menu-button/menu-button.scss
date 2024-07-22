@@ -4,13 +4,19 @@
   position: relative;
   height: 64px;
   width: 240px;
+  padding: 0 0 4px 4px;
+
   font-size: 28px;
+  text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 1;
   font-weight: 600;
-  padding: 0 0 4px 4px;
+
   border: 2px solid black;
   border-radius: 32px;
+
+  box-shadow: 3px 3px black;
+
   &__container {
     @include flex-column;
     gap: 16px;

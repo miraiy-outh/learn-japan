@@ -1,0 +1,13 @@
+@import "../../../index.scss";
+
+.folder {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+
+  &__name {
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+}

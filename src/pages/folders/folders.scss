@@ -1,0 +1,9 @@
+.folders {
+  &__container {
+    display: grid;
+    gap: 48px;
+    grid-template-columns: repeat(4, 224px);
+    justify-content: center;
+    justify-items: center;
+  }
+}

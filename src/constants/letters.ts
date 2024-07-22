@@ -331,6 +331,27 @@ export const letters: TAlphabet = {
     romaji: "wa",
     hiragana: "わ",
   },
+  wi: {
+    consonant: "",
+    katakana: "",
+    vowel: "",
+    romaji: "",
+    hiragana: "",
+  },
+  wu: {
+    consonant: "",
+    katakana: "",
+    vowel: "",
+    romaji: "",
+    hiragana: "",
+  },
+  we: {
+    consonant: "",
+    katakana: "",
+    vowel: "",
+    romaji: "",
+    hiragana: "",
+  },
   wo: {
     consonant: "w",
     katakana: "ヲ",
