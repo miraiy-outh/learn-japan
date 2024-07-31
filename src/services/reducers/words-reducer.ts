@@ -1,8 +1,8 @@
-import { generateUUID } from "../../utils/generate-id";
 import {
   WORDS_ADD_FOLDER,
   WORDS_ADD_WORD,
   WORDS_CHANGE_FOLDER,
+  WORDS_CHANGE_PAGE,
   WORDS_CHANGE_WORD,
   WORDS_CHANGE_WORD_FOLDER,
   WORDS_DELETE_FOLDER,
@@ -26,6 +26,7 @@ type TFolder = {
 type TWordsState = {
   words: TWord[];
   folders: TFolder[];
+  currentPage: string;
 };
 
 type TWordsInitAction = {
@@ -36,6 +37,7 @@ type TWordsInitAction = {
 
 type TWordsAddFolderAction = {
   type: typeof WORDS_ADD_FOLDER;
+  id: string;
   name: string;
 };
 
@@ -52,6 +54,7 @@ type TWordsDeleteFolderAction = {
 
 type TWordsAddWordAction = {
   type: typeof WORDS_ADD_WORD;
+  id: string;
   word: string;
   transcription: string;
   translation: string;
@@ -77,6 +80,11 @@ type TWordsChangeWordFolderAction = {
   folderId: string;
 };
 
+type TWordsChangePageAction = {
+  type: typeof WORDS_CHANGE_PAGE;
+  page: string;
+};
+
 export type TWordsActions =
   | TWordsInitAction
   | TWordsAddFolderAction
@@ -85,11 +93,13 @@ export type TWordsActions =
   | TWordsAddWordAction
   | TWordsChangeWordAction
   | TWordsDeleteWordAction
-  | TWordsChangeWordFolderAction;
+  | TWordsChangeWordFolderAction
+  | TWordsChangePageAction;
 
 const defaultState: TWordsState = {
   words: [],
   folders: [],
+  currentPage: "",
 };
 
 export function wordsReducer(
@@ -108,7 +118,7 @@ export function wordsReducer(
     }
     case WORDS_ADD_FOLDER: {
       const name = action.name;
-      const id = generateUUID();
+      const id = action.id;
       const newFolders = state.folders;
       newFolders.push({ id, name });
       return {
@@ -138,6 +148,50 @@ export function wordsReducer(
       return {
         ...state,
         folders: newFolders,
+      };
+    }
+
+    case WORDS_ADD_WORD: {
+      const id = action.id;
+      const word = action.word;
+      const transcription = action.transcription;
+      const translation = action.translation;
+      const folderId = action.folderId;
+      const newWords = state.words;
+      newWords.push({ id, word, transcription, translation, folderId });
+      return { ...state, words: newWords };
+    }
+
+    case WORDS_CHANGE_WORD: {
+      const id = action.id;
+      const word = action.word;
+      const transcription = action.transcription;
+      const translation = action.translation;
+      let newWords = state.words.map((wordItem) => {
+        if (wordItem.id === id) {
+          wordItem.word = word;
+          wordItem.transcription = transcription;
+          wordItem.translation = translation;
+        }
+        return wordItem;
+      });
+      return { ...state, words: newWords };
+    }
+
+    case WORDS_DELETE_WORD: {
+      const id = action.id;
+      const newWords = state.words.filter((word) => word.id !== id);
+      return {
+        ...state,
+        words: newWords,
+      };
+    }
+
+    case WORDS_CHANGE_PAGE: {
+      const page = action.page;
+      return {
+        ...state,
+        currentPage: page,
       };
     }
 

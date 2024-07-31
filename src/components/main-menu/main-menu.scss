@@ -3,6 +3,6 @@
 .main-menu {
   @include flex-row;
   justify-content: center;
-  margin: 0 0 64px;
+  margin: 0 0 32px;
   gap: 100px;
 }

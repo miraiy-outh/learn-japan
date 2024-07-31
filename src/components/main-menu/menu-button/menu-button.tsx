@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./menu-button.scss";
 import { useState } from "react";
-import { Submenu } from "./submenu/submenu";
+import { MainSubMenu } from "./main-sub-menu-button/main-sub-menu-button";
 
 export function MenuButton({ color, name }: { color: string; name: string }) {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ export function MenuButton({ color, name }: { color: string; name: string }) {
       >
         {name}
       </button>
-      {isSubMenuOpened ? <Submenu /> : <></>}
+      {isSubMenuOpened ? <MainSubMenu /> : <></>}
     </div>
   );
 }

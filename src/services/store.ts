@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { wordsReducer } from "./reducers/words-reducer";
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({ wordsData: wordsReducer });
 
 export function setupStore() {
   const store = configureStore({

@@ -1,11 +1,11 @@
 import "./folder.scss";
-import { FolderMint } from "../../../components/forders/folder-mint";
+import { FolderMint } from "../../../components/forder/folder-mint";
 
-export function Folder({ name }: { name: string }) {
+export function Folder() {
   return (
     <div className="folder">
       <FolderMint />
-      <div className="folder__name">{name}</div>
+      <div className="folder__name">folder</div>
     </div>
   );
 }

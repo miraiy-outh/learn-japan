@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+.sub-menu {
+  @include flex-row;
+  justify-content: center;
+  gap: 300px;
+  margin-bottom: 64px;
+
+  &__container {
+    @include flex-row;
+    justify-content: flex-end;
+    gap: 64px;
+    width: 400px;
+  }
+}
